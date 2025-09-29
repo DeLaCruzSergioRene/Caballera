@@ -15,7 +15,7 @@ def hola_mundo():
 @app.route('/factorial/<v1>')
 def factorial(v1):
     fact=1
-    for x in range(1, int(v1)):
+    for x in range(1, int(v1) +1):
         fact*=x
     return (f"El factorial de {v1}! es {fact}")
 
