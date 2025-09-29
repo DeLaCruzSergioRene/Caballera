@@ -3,25 +3,40 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
-def hola_mundo():
-    return '''
-<h1>¡Hola mundo desde Flask!</h1>
-<p> Texto random 1 </p>
-<p> Texto random 2 </p>
-<p> Texto random 3 </p>
-<p> Texto random 4 </p>
-<p> Texto random 5 </p>
-'''
-@app.route('/factorial/<v1>')
-def factorial(v1):
-    fact=1
-    for x in range(1, int(v1) +1):
-        fact*=x
-    return (f"El factorial de {v1}! es {fact}")
+def inicio():
+    return ('''
+<h1> Bienvenido a la calculadora desde Flask </h1>")
+<p> Para teclear en las sumas pon en el navegador: http://127.0.0.1:5000/sumar/<int:a>/<int:b> </p>
+<p> Para teclear en las restas pon en el navegador: http://127.0.0.1:5000/resta/<int:a>/<int:b> </p>
+<p> Para teclear en las multiplicaciones pon en el navegador: http://127.0.0.1:5000/multiplicar/<int:a>/<int:b> </p>
+<p> Para teclear en las divisiones pon en el navegador: http://127.0.0.1:5000/dividir/<int:a>/<int:b> </p>
+<p> Para teclear en las menores pon en el navegador: http://127.0.0.1:5000/menor/<int:a>/<int:b> </p>
+<p> Para teclear en las mayores pon en el navegador: http://127.0.0.1:5000/mayor/<int:a>/<int:b> </p>
+''')
 
-@app.route('/otra')
-def hola_mundo1():
-    return '<h1> ¡Hola mundo desde otra ruta!</h1>'
+@app.route('/sumar/<int:a>/<int:b>')
+def sumar(a , b):
+    return str(a + b)
+
+@app.route('/resta/<int:a>/<int:b>')
+def resta(a, b):
+    return str(a - b)
+
+@app.route('/multiplicar/<int:a>/<int:b>')
+def multiplicar(a, b):
+    return str(a * b)
+
+@app.route('/dividir/<int:a>/<int:b>')
+def dividir(a, b):
+    return str(a / b)
+
+@app.route('/menor/<int:a>/<int:b>')
+def menor(a, b):
+    return str(min(a, b))
+
+@app.route('/mayor/<int:a>/<int:b>')
+def mayor(a , b):
+    return str(max(a, b))
+
 if __name__ == '__main__':
     app.run(debug=True)
-    
