@@ -6,24 +6,12 @@ app = Flask(__name__)
 def inicio():
     return ('''
 <h1> Bienvenido a la calculadora desde Flask </h1>
-    <p> Para teclear en las sumas pon en el navegador (o haz clic aquí): 
-        <a href="/sumar/89/5">http://127.0.0.1:5000/sumar/89/5</a>
-    </p>
-    <p> Para teclear en las restas pon en el navegador (o haz clic aquí): 
-        <a href="/resta/10/5">http://127.0.0.1:5000/resta/10/5</a> 
-    </p>
-    <p> Para teclear en las multiplicaciones pon en el navegador (o haz clic aquí): 
-        <a href="/multiplicar/10/5">http://127.0.0.1:5000/multiplicar/10/5</a> 
-    </p>
-    <p> Para teclear en las divisiones pon en el navegador (o haz clic aquí): 
-        <a href="/dividir/10/5">http://127.0.0.1:5000/dividir/10/5</a> 
-    </p>
-    <p> Para teclear en las menores pon en el navegador (o haz clic aquí): 
-        <a href="/menor/10/5">http://127.0.0.1:5000/menor/10/5</a> 
-    </p>
-    <p> Para teclear en las mayores pon en el navegador (o haz clic aquí): 
-        <a href="/mayor/10/5">http://127.0.0.1:5000/mayor/10/5</a> 
-    </p>
+    <p> Para teclear en las sumas pon en el navegador: http://127.0.0.1:5000/sumar/10/5 </p>
+    <p> Para teclear en las restas pon en el navegador: http://127.0.0.1:5000/resta/10/5 </p>
+    <p> Para teclear en las multiplicaciones pon en el navegador: http://127.0.0.1:5000/multiplicar/10/5 </p>
+    <p> Para teclear en las divisiones pon en el navegador: http://127.0.0.1:5000/dividir/10/5 </p>
+    <p> Para teclear en las menores pon en el navegador: http://127.0.0.1:5000/menor/10/5 </p>
+    <p> Para teclear en las mayores pon en el navegador: http://127.0.0.1:5000/mayor/10/5 </p>
 <footer> De La Cruz Sergio René. 5.D </footer>
 ''')
 
