@@ -15,7 +15,7 @@ def inicio():
 <footer> De La Cruz Sergio René. 5.D </footer>
 ''')
 
-@app.route('/sumar/<int:a>/<int:b>')
+@app.route('/sumar/<int:a>/<int:b>') # --- Hay que cambiar los valores manualmente para diferentes resultados. Ejemplo: suma/20/30 --- #
 def sumar(a , b):
     return str(a + b)
 
